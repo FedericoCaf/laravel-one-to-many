@@ -20,7 +20,20 @@
           <label for="content" class="form-label">Content</label>
           <textarea type="text" class="form-control @error('content') is-invalid @enderror" value=" {{ old('content') }} " name="content" id="content"> </textarea>
         </div>
-    
+        <div>
+
+          <select name="category_id" id="category_id" class="form-control" aria-label="Default select example">
+            <option>Scegli una categoria</option>
+
+            @foreach ($categories as $category)      
+              <option @if($category->id == old('category_id') ) selected @endif
+               value=" {{ $category->id }} "> {{ $category->name }} </option>
+            @endforeach
+        
+          </select>
+
+        </div>
+
         <button type="submit" class="btn btn-primary m-2">Salva</button>
         <button type="reset" class="btn btn-warning m-2">Reset</button>
       </form>

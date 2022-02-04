@@ -31,6 +31,6 @@ class Post extends Model
 
     }
 
-    protected $fillable = ['title', 'content'];
+    protected $fillable = ['title', 'content', 'slug', 'category_id'];
 
 }

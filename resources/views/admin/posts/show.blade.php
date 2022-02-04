@@ -4,7 +4,7 @@
 <div class="container">
 
   <h1> {{ $post->title }}  </h1> 
-  <span class="badge bg-primary"> {{ $post->category->name }} </span>
+  <span class="badge bg-success"> {{ $post->category->name }} </span>
     
   <p> {{ $post->content }} </p>
 
